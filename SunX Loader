@@ -9,5 +9,7 @@ if i == PlaceID then
 loadstring(game:HttpGet(v))()
 else
 game:GetService("Players").LocalPlayer:Kick("Game Not Support")
+wait(1.5)
+game:Shutdown()
 end
 end
