@@ -1,5 +1,3 @@
 local SupportGame = {
-[3101667897] = "https://raw.githubusercontent.com/title33/Sun-X-Hub-legends-of-speed.lua-main-free/main/README.md"
+[3101667897] = "https://raw.githubusercontent.com/GodYT88/SunX/main/SunX%20Loader"
 }
-
-return SupportGame
