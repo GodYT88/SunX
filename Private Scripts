@@ -1,0 +1,105 @@
+-- Varibles
+local Plrs = game:GetService("Players")
+local Plr = Plrs.LocalPlayer
+local CHAR = Plr.Character
+local HRP = CHAR.HumanoidRootPart
+
+-- Instance
+
+local SafeArea = Instance.new("Part" , workspace)
+SafeArea.Position = Vector3.new(100000,100000,100000)
+SafeArea.Size = Vector3.new(100,3,100)
+SafeArea.Material = "SmoothPlastic"
+SafeArea.Anchored = true
+SafeArea.Transparency = 0.5
+
+-- Settings
+
+Settings = {
+    ["AutoLift"] = false,
+    ["Tool"] = "None"
+}
+
+-- Functions
+function TP(...)
+local args = {...}
+HRP.CFrame = CFrame.new(args[1] , args[2] , args[3])
+end
+
+-- Scripts
+
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/title33/ui/main/README.md")()
+
+local win = DiscordLib:Window("Sun X Hub")
+
+local serv = win:Server("Main", "http://www.roblox.com/asset/?id=11254763826")
+
+
+local ATF = serv:Channel("Auto-Farm")
+ATF:Toggle("Auto-Lift",false, function(bool)
+    Settings.AutoLift = bool
+end)
+
+local ToolD = ATF:Dropdown("Select Tool",{"None"}, function(bool)
+Settings.Tool = bool
+end)
+
+ATF:Button("Reset Tool", function()
+spawn(function()
+ToolD:Clear()
+for i,v in pairs(Plr.Backpack:GetDescendants()) do
+if v.Name == "repTime" then
+ToolD:Add(v.Parent.Name)
+end
+end
+end)
+end)
+
+local ATH = serv:Channel("Auto-Things")
+
+ATH:Toggle("Auto-Lift",false, function(bool)
+    Settings.AutoLift = bool
+end)
+
+local serv2 = win:Server("Teleport", "http://www.roblox.com/asset/?id=6723742952")
+
+local Teleport = serv2:Channel("Teleports")
+
+Teleport:Button("Spawn", function()
+TP(2, 87, 244)
+end)
+
+Teleport:Button("Safe Area", function()
+TP(100000,100005,100000)
+end)
+
+
+local serv3 = win:Server("Develop", "http://www.roblox.com/asset/?id=10885640682")
+
+local Develop = serv3:Channel("Develop")
+
+Develop:Label("The developer is a Thai person")
+
+Develop:Label("There are 2 Developers")
+
+Develop:Label("1. TITLEES#7800")
+
+Develop:Label("2. GodYT_2.0#5102")
+
+Develop:Label("                            Thank you for using our script")
+
+-- Loop Functions
+
+spawn(function()
+while wait(0.1) do
+if Settings.AutoLift then
+pcall(function()
+if not CHAR:FindFirstChild(Settings.Tool) then
+CHAR.Humanoid:EquipTool(Plr.Backpack[Settings.Tool])
+else
+Plr:FindFirstChild("muscleEvent"):FireServer("rep")
+end
+end) -- pcall
+end
+end
+end)
