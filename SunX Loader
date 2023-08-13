@@ -1,0 +1,11 @@
+local PlaceID = game.PlaceId
+
+local SupportGame = game:HttpGet("")
+
+for i,v in pairs(SupportGame) do
+if i == PlaceID then
+loadstring(game:HttpGet(v))()
+else
+game:GetService("Players").LocalPlayer:Destroy()
+end
+end
