@@ -1,6 +1,6 @@
 local PlaceID = game.PlaceId
 
-local SupportGame = game:HttpGet("")
+local SupportGame = game:HttpGet("https://raw.githubusercontent.com/GodYT88/SunX/main/SupportGame")
 
 for i,v in pairs(SupportGame) do
 if i == PlaceID then
