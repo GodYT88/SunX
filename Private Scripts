@@ -20,6 +20,15 @@ Settings = {
     ["Tool"] = "None"
 }
 
+Chests = {
+    ["enchantedChest"] = false,
+    ["goldenChest"] = false,
+    ["groupRewardsCircle"] = false,
+    ["legendsChest"] = false,
+    ["magmaChest"] = false,
+    ["mythicalChest"] = false
+}
+
 -- Functions
 function TP(...)
 local args = {...}
@@ -61,12 +70,10 @@ local ATH = serv:Channel("Auto-Things")
 ATH:Button("Collect-Chest", function()
 spawn(function()
 for i,v in pairs(workspace:GetChildren()) do
-if v.ClassName == "Model" then
-if v:FindFirstChild("Chest") then
+if table.find(Chests , v.Name) then
 firetouchinterest(v.circleInner , HRP , 0)
 wait(1)
 firetouchinterest(v.circleInner , HRP , 1)
-end
 end
 end
 end)
