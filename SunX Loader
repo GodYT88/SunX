@@ -1,3 +1,6 @@
+repeat wait() until game:Loaded()
+if not _G.Loaded then
+_G.Loaded = true
 local PlaceID = game.PlaceId
 
 local SupportGame = {
@@ -9,5 +12,6 @@ if i == PlaceID then
 loadstring(game:HttpGet(v))()
 else
 game:GetService("Players").LocalPlayer:Kick("Game Not Support")
+end
 end
 end
