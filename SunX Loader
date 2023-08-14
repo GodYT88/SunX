@@ -11,7 +11,7 @@ for i,v in pairs(SupportGame) do
 if i == PlaceID then
 loadstring(game:HttpGet(v))()
 else
-game:GetService("Players").LocalPlayer:Kick("Game Not Support")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GodYT88/SunX/main/nil"))()
 end
 end
 end
