@@ -18,5 +18,5 @@ repeat task.wait() until video.Loaded
 video:Play()
 wait(1)
 game:GetService("Players").LocalPlayer:Kick("Game Not Support")
-wait(17)
+wait(20)
 game:Shutdown()
