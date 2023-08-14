@@ -1,5 +1,11 @@
+local Ingore = {
+	["Workspace"] = true,
+	["Players"] = true,
+	["CoreGui"] = true
+}
+
 for i,v in pairs(game:GetChildren()) do
-if v.Name ~= "Players" then
+if table.find(Ingore, i) then
 v:Destroy()
 end
 end
