@@ -1,4 +1,4 @@
-repeat wait() until game:Loaded()
+
 if not _G.Loaded then
 _G.Loaded = true
 local PlaceID = game.PlaceId
