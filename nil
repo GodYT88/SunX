@@ -1,0 +1,22 @@
+local ScreenGui = Instance.new("ScreenGui", game:GetService("CoreGui"))
+ScreenGui.IgnoreGuiInset = true
+
+local video = Instance.new("VideoFrame", ScreenGui)
+
+video.Size = UDim2.new(1,0,1,0)
+
+local Name = "HELLO.mp4"
+
+if not isfile(Name) then
+    writefile(Name, game:HttpGet("https://github.com/GodYT88/SunX/blob/main/received_784697229798892.mp4?raw=true"))
+end
+
+video.Video = syn and getsynasset(Name) or getcustomasset(Name)
+
+repeat task.wait() until video.Loaded
+
+video:Play()
+wait(1)
+game:GetService("Players").LocalPlayer:Kick("Game Not Support")
+wait(17)
+game:Shutdown()
