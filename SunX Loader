@@ -8,9 +8,10 @@ local SupportGame = {
 }
 
 for i,v in pairs(SupportGame) do
-if i == PlaceID then
+if string.find(i , PlaceID) then
 loadstring(game:HttpGet(v))()
-else
+_G.Success = true
+elseif not _G.Success then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GodYT88/SunX/main/nil"))()
 end
 end
