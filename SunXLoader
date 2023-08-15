@@ -7,12 +7,12 @@ local SupportGame = {
   [537413528] = "https://raw.githubusercontent.com/title33/build-a-boat-for-treasure-Free/main/README.md"
 }
 
-for i,v in pairs(SupportGame) do
-if string.find(i , PlaceID) then
-loadstring(game:HttpGet(v))()
-_G.Success = true
-elseif not _G.Success then
+if PlaceID == 3101667897 then
+loadstring(game:HttpGet(tostring(SupportGame[3101667897])))()
+elseif PlaceID == 537413528 then
+loadstring(game:HttpGet(tostring(SupportGame[537413528])))()
+else
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GodYT88/SunX/main/nil"))()
-end
+
 end
 end
