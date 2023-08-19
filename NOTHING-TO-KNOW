@@ -1,3 +1,4 @@
+local Xylo = {
 local XyloHUBC = (function(Image , Name)
 
 local Delay2 = false
@@ -28,3 +29,4 @@ end
 end)
 
 end) -- End Of Function
+}
