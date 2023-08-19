@@ -1,4 +1,3 @@
-local Xylo = {
 OPENUI = (function(Image , Name)
 if not game:GetService("CoreGui").TopBarApp.TopBarFrame:FindFirstChild("XyloH") then
 local Delay2 = false
@@ -34,4 +33,3 @@ game:GetService("CoreGui").TopBarApp.TopBarFrame.XyloH:Destroy()
 end
 
 end) -- End Of Function
-}
