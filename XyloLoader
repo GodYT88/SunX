@@ -3,7 +3,7 @@ _G.Load = true
 local PlaceID = game.PlaceId
 
 local SupportGame = {
-  [3101667897] = "https://raw.githubusercontent.com/title33/Sun-X-Hub-legends-of-speed.lua-main-free/main/README.md",
+  [3101667897] = "https://raw.githubusercontent.com/title33/Xylo-Hub/main/README.md",
   [537413528] = "https://raw.githubusercontent.com/title33/build-a-boat-for-treasure-Free/main/README.md"
 }
 
