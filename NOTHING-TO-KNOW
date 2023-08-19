@@ -1,4 +1,4 @@
-OPENUI = (function(Image , Name)
+local OPENUI = (function(Image , Name)
 if not game:GetService("CoreGui").TopBarApp.TopBarFrame:FindFirstChild("XyloH") then
 local Delay2 = false
 local leftFrame = game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame
