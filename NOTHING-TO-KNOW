@@ -1,6 +1,6 @@
 local Xylo = {
 local OPENUI = (function(Image , Name)
-
+if not game:GetService("CoreGui").TopBarApp.TopBarFrame:FindFirstChild("XyloH") then
 local Delay2 = false
 local leftFrame = game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame
 
@@ -14,6 +14,7 @@ imageButton.Image = "rbxassetid://".. tonumber(Image)
 imageButton.BackgroundTransparency = 1
 imageButton.ZIndex = 2
 imageButton.Parent = leftFrame.Parent
+imageButton.Name = "XyloH"
 
 local uiCorner = Instance.new("UICorner")
 uiCorner.CornerRadius = UDim.new(0, 15)
@@ -27,6 +28,10 @@ if Delay2 == false then
     Delay2 = false
 end
 end)
+
+else
+game:GetService("CoreGui").TopBarApp.TopBarFrame.XyloH:Destroy()
+end
 
 end) -- End Of Function
 }
