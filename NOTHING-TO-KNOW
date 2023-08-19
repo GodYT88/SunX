@@ -1,4 +1,4 @@
-local XyloHUBC = function(Image , Name)
+local XyloHUBC = (function(Image , Name)
 
 local Delay2 = false
 local leftFrame = game:GetService("CoreGui").TopBarApp.TopBarFrame.LeftFrame
@@ -27,4 +27,4 @@ if Delay2 == false then
 end
 end)
 
-end -- End Of Function
+end) -- End Of Function
