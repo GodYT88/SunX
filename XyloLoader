@@ -1,18 +1,16 @@
 if not _G.Load then
-_G.Load = true
-local PlaceID = game.PlaceId
+    _G.Load = true
+    local PlaceID = game.PlaceId
+    local Scripts = {
+        [3101667897] = "https://raw.githubusercontent.com/title33/Xylo-Hub/main/README.md",
+        [537413528] = "https://raw.githubusercontent.com/title33/Xylo-Hubb/main/README.md"
+        -- Add more PlaceIDs and corresponding script URLs as needed
+    }
 
-local SupportGame = {
-  [3101667897] = "https://raw.githubusercontent.com/title33/Xylo-Hub/main/README.md",
-  [537413528] = "https://raw.githubusercontent.com/title33/Xylo-Hubb/main/README.md"
-}
-
-if PlaceID == 3101667897 or PlaceID == 3232996272 then
-loadstring(game:HttpGet(tostring(SupportGame[3101667897])))()
-elseif PlaceID == 537413528 then
-loadstring(game:HttpGet(tostring(SupportGame[537413528])))()
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GodYT88/SunX/main/nil"))()
-
-end
+    local ScriptURL = Scripts[PlaceID]
+    if ScriptURL then
+        loadstring(game:HttpGet(ScriptURL))()
+    else
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/GodYT88/SunX/main/nil"))()
+  end
 end
