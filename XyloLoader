@@ -11,6 +11,6 @@ if not _G.Load then
     if ScriptURL then
         loadstring(game:HttpGet(ScriptURL))()
     else
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/GodYT88/SunX/main/nil"))()
+      game:GetService("Players").LocalPlayer:Kick("Game Not Support")
   end
 end
