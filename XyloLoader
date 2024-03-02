@@ -3,7 +3,8 @@ if not _G.Load then
     local PlaceID = game.PlaceId
     local Scripts = {
         [3101667897] = "https://raw.githubusercontent.com/title33/Xylo-Hub/main/README.md",
-        [537413528] = "https://raw.githubusercontent.com/title33/Xylo-Hubb/main/README.md"
+        [537413528] = "https://raw.githubusercontent.com/title33/Xylo-Hubb/main/README.md",
+        [15049111150] = "https://raw.githubusercontent.com/title33/Xylo-hub-Second-Piece-Free/main/lua"
         -- Add more PlaceIDs and corresponding script URLs as needed
     }
 
